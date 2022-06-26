@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Input } from 'reactstrap';
+import { Label, Input } from 'reactstrap';
 import { List } from './List';
+import useQueryString from './queryString/useQueryString';
 
 function App() {
-  const [user, setUser] = useState('davidlyons4415');
+  // const [user, setUser] = useState('davidlyons4415');
+  // https://medium.com/swlh/using-react-hooks-to-sync-your-component-state-with-the-url-query-string-81ccdfcb174f
+  const [user, setUser] = useQueryString('u', 'davidlyons4415');
 
   const [alreadyRead, setAlreadyRead] = useState([]);
   const [currentlyReading, setCurrentlyReading] = useState([]);
@@ -31,7 +34,9 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <Input placeholder="Open Library User ID" value={user} onChange={changeUser} />
+              <Label for="input-user">Open Library User ID</Label>
+              <Input id="input-user" value={user} onChange={changeUser} className="mb-2" />
+              <a href={`https://openlibrary.org/people/${user}`}>View Profile</a>
             </div>
           </div>
         </div>

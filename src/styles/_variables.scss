@@ -1,0 +1,18 @@
+$body-bg: #222;
+$body-color: #fff;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$headings-font-weight: 300;
+
+$input-border-color: #777;
+$input-border-radius: 0;
+$input-border-radius-sm: 0;
+$input-border-radius-lg: 0;
+
+$blue: #0d6efd;
+$primary: $blue;
+
+$link-color: $primary;
+$link-hover-color: tint-color($link-color, 20%);
+$link-decoration: none;
+$link-hover-decoration: underline;
