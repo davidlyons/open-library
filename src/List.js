@@ -1,5 +1,5 @@
-export const key = 'olid';
-export const size = 'M';
+const key = 'olid';
+const size = 'M';
 
 export const List = ({ heading, list }) => (
   <div className="py-4">
