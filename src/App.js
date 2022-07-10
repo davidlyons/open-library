@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Label, Input } from 'reactstrap';
+import { InputGroup, InputGroupText, Input, Button } from 'reactstrap';
 import { List } from './List';
 import useQueryString from './queryString/useQueryString';
 
@@ -30,13 +30,25 @@ function App() {
 
   return (
     <>
-      <div className="py-4">
-        <div className="container">
+      <div className="py-4 border-bottom">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-md-3">
-              <Label for="input-user">Open Library User ID</Label>
-              <Input id="input-user" value={user} onChange={changeUser} className="mb-2" />
-              <a href={`https://openlibrary.org/people/${user}`}>View Profile</a>
+            <div className="col-md-8 col-lg-6 col-xl-5">
+              {/* <Label for="input-user">Open Library User ID</Label> */}
+              {/* <Input id="input-user" value={user} onChange={changeUser} className="mb-2" /> */}
+              {/* <a href={`https://openlibrary.org/people/${user}`}>View Profile</a> */}
+              <InputGroup size="sm">
+                <InputGroupText>Open Library ID</InputGroupText>
+                <Input id="input-user" value={user} onChange={changeUser} />
+                <Button
+                  outline
+                  href={`https://openlibrary.org/people/${user}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Profile
+                </Button>
+              </InputGroup>
             </div>
           </div>
         </div>
