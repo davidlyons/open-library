@@ -2,7 +2,7 @@ const key = 'olid';
 const size = 'M';
 
 export const List = ({ heading, list }) => {
-  console.log(list);
+  // console.log(list);
   return (
     <div className="py-4">
       <div className="container-fluid">
