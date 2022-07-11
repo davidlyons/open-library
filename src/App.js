@@ -20,6 +20,8 @@ function App() {
     requestData('already-read', setAlreadyRead);
     requestData('currently-reading', setCurrentlyReading);
     requestData('want-to-read', setWantToRead);
+
+    document.title = `Open Library Reading Lists - ${user}`;
   }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function requestData(list, set) {
@@ -41,6 +43,7 @@ function App() {
                 <InputGroupText>Open Library ID</InputGroupText>
                 <Input id="input-user" value={user} onChange={changeUser} />
                 <Button
+                  color="primary"
                   outline
                   href={`https://openlibrary.org/people/${user}`}
                   target="_blank"
