@@ -4,20 +4,20 @@
   "homepage": "https://davidlyons.dev/open-library",
   "private": true,
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1",
+    "bootstrap": "^5.3.6",
     "gh-pages": "^6.3.0",
-    "query-string": "^7.1.1",
+    "query-string": "^9.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reactstrap": "^9.1.1",
-    "sass": "^1.53.0"
+    "reactstrap": "^9.2.3",
+    "sass": "^1.77.6"
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.5.1",
+    "@vitejs/plugin-react": "^4.5.2",
     "vite": "^6.3.5"
   }
 }
